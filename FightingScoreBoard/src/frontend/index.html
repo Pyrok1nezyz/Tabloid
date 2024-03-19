@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ScoreBoard</title>
+    <script src="http://localhost:9003/api/files/adminpanel.js"></script>
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <noscript id="noscript_text">
+        Этот браузер не поддерживает JavaScript
+        <style>
+            .main_content{
+                display: none;
+            }
+        </style>
+    </noscript>
+
+    <nav>
+        <div id="root" class="main_content">
+            <!-- Tab links -->
+            <div class="navbar tab justify-content-start">
+                <button type="button" class="btn btn-primary m-1" onclick="openCurrentTab(event, 'Players')">Players</button>
+                <button type="button" class="btn btn-primary m-1"  onclick="openCurrentTab(event, 'Meta')">Meta</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="tab_Players">
+                <iframe class="tabcontent" src="PlayersTab.html"></iframe>
+            </div>
+
+            <div id="tab_Meta" class="d-none">
+                <iframe class="tabcontent"  src="http://localhost:9003/api/files/MetaTab.html"></iframe>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
